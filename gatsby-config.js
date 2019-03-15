@@ -6,6 +6,8 @@ module.exports = {
   plugins: [
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -14,10 +16,22 @@ module.exports = {
       },
     },
     {
-      "resolve": `gatsby-transformer-remark`,
-      "options": {
-        "excerpt_separator": `<!-- excerpt -->`
-      }
-    }
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        excerpt_separator: `<!-- excerpt -->`,
+        plugins: [
+          "gatsby-remark-copy-linked-files",
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: true,
+              sizeByPixelDensity: true,
+              showCaptions: true,
+            },
+          },
+        ],
+      },
+    },
   ],
 }
