@@ -5,6 +5,7 @@ import { Header } from "../components/Header"
 
 const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
+  console.log("Layout data ", data)
   return (
     <div>
       <Header />
@@ -22,10 +23,13 @@ const Layout = ({ data }) => {
 export const query = graphql`
   query HomepageQuery {
     allMarkdownRemark(
-    filter: { fileAbsolutePath: {regex: "\/[0-9]{4}\/"} },
-    sort: { order: DESC, fields: [frontmatter___date] }) {
+      filter: { fileAbsolutePath: { regex: "/[0-9]{4}/" } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
+          excerpt(truncate: true, format: HTML)
+
           frontmatter {
             title
             path

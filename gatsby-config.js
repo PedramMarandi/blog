@@ -13,5 +13,11 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    {
+      "resolve": `gatsby-transformer-remark`,
+      "options": {
+        "excerpt_separator": `<!-- excerpt -->`
+      }
+    }
   ],
 }
