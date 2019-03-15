@@ -1,8 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
+import styled from 'styled-components'
 import moment from "jalali-moment"
 import Img from "gatsby-image"
 
+
+const Div  = styled('div')`
+  background-color: aquamarine;
+`
 const Template = ({ data, pageContext }) => {
   const { markdownRemark } = data
   const { html } = markdownRemark
@@ -13,11 +18,11 @@ const Template = ({ data, pageContext }) => {
   console.log("pageContext ", pageContext)
   console.log("blog post data ", data)
   return (
-    <div>
+    <Div>
       <h1>{title}</h1>
       {image && <Img fluid={image.childImageSharp.fluid} />}
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </Div>
   )
 }
 
