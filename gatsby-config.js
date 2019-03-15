@@ -9,6 +9,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "بلاگ رضا خسروشاهی",
+        short_name: "بلاگ",
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#fff",
+        icon: "static/icon.png", // This path is relative to the root of the site.
+      },
+    },
+    "gatsby-plugin-offline",
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
