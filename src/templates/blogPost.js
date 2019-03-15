@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 
 
 const Div  = styled('div')`
-  background-color: aquamarine;
+  background-color: white;
 `
 const Template = ({ data, pageContext }) => {
   const { markdownRemark } = data
