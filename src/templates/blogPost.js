@@ -7,6 +7,7 @@ const Template = ({ data, pageContext }) => {
   const { html } = markdownRemark
   const { next, prev } = pageContext;
   console.log("pageContext ", pageContext);
+  console.log("data ", data);
   return (
     <div>
       <h1>{title}</h1>
