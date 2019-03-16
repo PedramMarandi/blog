@@ -2,22 +2,25 @@ import React from "react"
 import uuid from "uuid4"
 import { graphql, Link } from "gatsby"
 import { Header } from "../components/Header"
+import { BlogLayout } from "../components/BlogLayout"
 
 const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   console.log("Layout data ", data)
   return (
-    <div>
-      <Header />
-      {edges.map(edge => {
-        const { frontmatter } = edge.node
-        return (
-          <div key={uuid()}>
-            <Link to={frontmatter.path}>{frontmatter.title}</Link>
-          </div>
-        )
-      })}
-    </div>
+    <BlogLayout>
+      <div className="Layout">
+        <Header />
+        {edges.map(edge => {
+          const { frontmatter } = edge.node
+          return (
+            <div key={uuid()}>
+              <Link to={frontmatter.path}>{frontmatter.title}</Link>
+            </div>
+          )
+        })}
+      </div>
+    </BlogLayout>
   )
 }
 export const query = graphql`
