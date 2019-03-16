@@ -34,29 +34,22 @@ module.exports = {
         plugins: [
           "gatsby-remark-copy-linked-files",
           {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-              plugins: [
-                {
-                  resolve: `gatsby-remark-prismjs`,
-                  options: {
-                    classPrefix: "language-",
-                    inlineCodeMarker: null,
-                    aliases: {},
-                    showLineNumbers: false,
-                    noInlineHighlight: false,
-                  },
-                },
-              ],
-            },
-          },
-          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 800,
               linkImagesToOriginal: true,
               sizeByPixelDensity: true,
               showCaptions: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
             },
           },
         ],

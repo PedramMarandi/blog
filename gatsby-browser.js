@@ -1,2 +1,2 @@
 // gatsby-browser.js
-grequire("prismjs/themes/prism-tomorrow.css")
+require("prismjs/themes/prism-tomorrow.css")
