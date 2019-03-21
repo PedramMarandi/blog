@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import * as fonts from './fonts'
+import * as fonts from "./fonts"
 import { largeUp, mediumUp } from "./breakpoints"
 
 export const GlobalStyle = createGlobalStyle`
@@ -15,7 +15,9 @@ export const GlobalStyle = createGlobalStyle`
   
     src: url(${fonts.IRANBoldEOT}?#iefix) format('eot'),  /* IE6–8 */
   url(${fonts.IRANBoldWOFF2}) format('woff2'),  /* Chrome36+, Opera24+*/
-  url(${fonts.IRANBoldWOFF}) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url(${
+    fonts.IRANBoldWOFF
+  }) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
  url(${fonts.IRANBoldTTF}) format('ttf');
     font-weight: 600;
   }
@@ -31,6 +33,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   html {
     direction: rtl;
+  }
+  html.ln__helper {
     background-size: 1px var(--base-line);
     background-image: linear-gradient(rgba(0, 188, 212, 0.23) 1px, transparent 0%, transparent);
   }
