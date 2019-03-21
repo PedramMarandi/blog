@@ -1,7 +1,11 @@
 import { createGlobalStyle } from "styled-components"
 import * as fonts from './fonts'
+import { largeUp, mediumUp } from "./breakpoints"
 
 export const GlobalStyle = createGlobalStyle`
+  :root {
+    --base-line: 1.5rem;
+  }
   * {
     box-sizing: border-box;
   }
@@ -27,6 +31,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   html {
     direction: rtl;
+    background-size: 1px var(--base-line);
+    background-image: linear-gradient(rgba(0, 188, 212, 0.23) 1px, transparent 0%, transparent);
   }
   html,
   body,
@@ -43,5 +49,23 @@ export const GlobalStyle = createGlobalStyle`
   }
   html {
     font-family: IRAN, serif;
+  }
+  html {
+    background-color: ${props => props.theme.backColor};
+  }
+  .Layout {
+    display: none;
+  }
+  .main_width {
+    width: 80%;
+    margin: 0 auto;
+    
+    @media ${mediumUp} {
+      width: 70%;
+    }
+    
+    @media ${largeUp} {
+      width: 50%;
+    }
   }
 `
