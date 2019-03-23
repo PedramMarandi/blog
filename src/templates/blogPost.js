@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import { BlogLayout } from "../components/BlogLayout"
 import { H1 } from "../components/H1"
 import { PostHtml } from "../components/PostHtml"
+import { PostPageHelmet } from "../components/Helmet"
 
 const TemplateDiv = styled("div")`
   margin-top: calc(3 * var(--base-line));
@@ -22,6 +23,7 @@ const Template = ({ data, pageContext }) => {
   console.log("blog post data ", data)
   return (
     <BlogLayout>
+      <PostPageHelmet frontmatter={frontmatter} />
       <TemplateDiv>
         <H1>{title}</H1>
         <div className="post__content">
@@ -49,6 +51,9 @@ export const query = graphql`
       frontmatter {
         title
         date
+        date
+        keywords
+        description
         image {
           childImageSharp {
             fluid(maxWidth: 786, quality: 100) {
