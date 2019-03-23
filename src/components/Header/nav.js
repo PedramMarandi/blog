@@ -13,12 +13,13 @@ const Ul = styled("ul")`
       padding: 0.75rem 0 0.75rem 1rem;
       transition: border-bottom 0.5s ease;
       color: ${props => props.theme.textColor};
-      border-bottom: 0.1rem solid #f5f5f5;
+      border-bottom: 0.1rem solid ${props => props.theme.navBorderColor};
     }
 
     &:hover {
       a {
-        border-color: ${props => props.theme.primary};
+        color: ${props => props.theme.navHoverColor};
+        border-color: ${props => props.theme.navHoverColor};
       }
     }
   }

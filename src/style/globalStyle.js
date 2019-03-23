@@ -53,9 +53,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   html {
     font-family: IRAN, serif;
-  }
-  html {
     background-color: ${props => props.theme.backColor};
+    line-height: var(--base-line);
   }
   .Layout {
     display: none;
