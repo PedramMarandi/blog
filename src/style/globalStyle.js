@@ -55,6 +55,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: IRAN, serif;
     background-color: ${props => props.theme.backColor};
     line-height: var(--base-line);
+    transition: background-color 0.5s ease;
   }
   .Layout {
     display: none;
