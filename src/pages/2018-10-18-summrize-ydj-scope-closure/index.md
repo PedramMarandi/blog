@@ -1,7 +1,7 @@
 ---
 layout: post
 path: "/summarize-ydj-scope-closure"
-Date: "2018-10-18"
+date: "2018-10-18"
 title: "خلاصه‌ای از کتاب You Don't Know JS Scope & Closures"
 image: YDJ.jpg
 description: این نوشته خلاصه‌ای است از کتاب You Don’t Know JS Scope & Closures که میتونه به شما در درک بهتر جاوااسکریپت کمک کنه.

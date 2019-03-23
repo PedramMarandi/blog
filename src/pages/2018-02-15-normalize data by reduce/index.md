@@ -1,6 +1,6 @@
 ---
 path: "/normalize-data-by-reduce"
-Date: "2018-02-15"
+date: "2018-02-15"
 title: "normal کردن Data با استفاده از متد Reduce"
 keywords:
   [
