@@ -70,7 +70,7 @@ export const GlobalStyle = createGlobalStyle`
     transition: background-color 0.5s ease;
   }
   .main_width {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     
     @media ${mediumUp} {
