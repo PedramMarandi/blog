@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/gatsby-blog",
   siteMetadata: {
     title: "My Blog",
     description: "gatsby reza khosroshahi blog",
