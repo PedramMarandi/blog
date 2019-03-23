@@ -1,6 +1,6 @@
-import React from 'react';
-
+import React from "react"
+import { Switch } from "./switchTheme"
 
 export const NavInfo = () => {
-  return <p>Nav info</p>
+  return <Switch />
 }
