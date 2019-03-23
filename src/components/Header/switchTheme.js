@@ -3,19 +3,19 @@ import styled from "styled-components"
 import { ToggleThemeProvider } from "../BlogLayout"
 
 const Slide = styled("div")`
-  width: 2.4rem;
-  height: 1.4rem;
+  width: 2.5rem;
+  height: 1.5rem;
   background: #e0e0e0;
   border-radius: 0.7rem;
   &:after {
     position: relative;
     display: block;
-    margin-right: 1.1rem;
-    top: 0.15rem;
+    margin-right: 1.2rem;
+    top: 0.25rem;
     content: " ";
     background: #fff;
-    width: 1.1rem;
-    height: 1.1rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     transition: margin-right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
@@ -23,15 +23,13 @@ const Slide = styled("div")`
 const Input = styled("input")`
   display: none;
   &:checked + .slide:after {
-    margin-right: 0.2rem;
+    margin-right: 0.4rem;
   }
   &:checked + .slide {
     background: #039be5;
   }
 `
 const Label = styled("label")`
-  position: relative;
-  top: 0.125rem;
   background-color: transparent;
   width: 2.4rem;
   height: 1.4rem;
