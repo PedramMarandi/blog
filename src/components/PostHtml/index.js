@@ -25,6 +25,7 @@ export const PostHtml = styled("div")`
 
   h2 {
     margin: var(--base-line) 0;
+    line-height: calc(2 * var(--base-line));
   }
 
   h3 {

@@ -21,7 +21,7 @@ const Div = styled("div")`
   }
   &:after {
     width: 125px;
-    height: 25px;
+    height: var(--base-line);
     display: block;
     content: "";
     background-image: url(${Wave});
