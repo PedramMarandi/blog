@@ -14,7 +14,7 @@ const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   return (
     <BlogLayout>
-      <StyledLayout className="main_width">
+      <StyledLayout>
         {edges.map(edge => {
           const { frontmatter, excerpt } = edge.node
           return (

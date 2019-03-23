@@ -18,7 +18,7 @@ export const BlogLayout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <ToggleThemeProvider.Provider value={{ toggleTheme }}>
         <Header />
-        <div className="children">{children}</div>
+        <div className="children main_width">{children}</div>
         <GlobalStyle />
       </ToggleThemeProvider.Provider>
     </ThemeProvider>

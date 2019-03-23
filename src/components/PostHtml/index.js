@@ -19,4 +19,20 @@ export const PostHtml = styled("div")`
   h4 {
     color: ${props => props.theme.textColor};
   }
+  p {
+    margin: var(--base-line) 0;
+  }
+  
+  h2 {
+    margin: var(--base-line) 0;
+  }
+  
+  .gatsby-highlight {
+    direction: ltr !important;
+    pre {
+      margin: 0;
+      border-radius: 0.2rem;
+      max-height: 336px;
+    }
+  }
 `
