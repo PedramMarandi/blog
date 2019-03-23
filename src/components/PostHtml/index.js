@@ -22,11 +22,15 @@ export const PostHtml = styled("div")`
   p {
     margin: var(--base-line) 0;
   }
-  
+
   h2 {
     margin: var(--base-line) 0;
   }
-  
+
+  h3 {
+    margin: var(--base-line) 0;
+  }
+
   .gatsby-highlight {
     direction: ltr !important;
     pre {
@@ -34,5 +38,21 @@ export const PostHtml = styled("div")`
       border-radius: 0.2rem;
       max-height: 336px;
     }
+  }
+  .en {
+    direction: ltr !important;
+    display: inline-block;
+  }
+  mark {
+    background-color: ${props => props.theme.markBackColor};
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.1rem;
+    color: ${props => props.theme.markColor};
+  }
+  
+  ul {
+    list-style-type: arabic-indic;
+    padding-right: 2.618rem;
+    margin: var(--base-line) 0;
   }
 `
