@@ -6,6 +6,11 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --base-line: 1.5rem;
   }
+  @media ${mediumUp} {
+    :root {
+      --base-line: 1.75rem;
+    }
+  }
   * {
     box-sizing: border-box;
   }
@@ -16,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url(${fonts.IRANBoldEOT}?#iefix) format('eot'),  /* IE6–8 */
   url(${fonts.IRANBoldWOFF2}) format('woff2'),  /* Chrome36+, Opera24+*/
   url(${
-  fonts.IRANBoldWOFF
+    fonts.IRANBoldWOFF
   }) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
  url(${fonts.IRANBoldTTF}) format('ttf');
     font-weight: 600;
