@@ -65,6 +65,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-family: IRAN, serif;
     background-color: ${props => props.theme.backColor};
+    -webkit-font-smoothing: antialiased;
     line-height: var(--base-line);
     transition: background-color 0.5s ease;
   }
