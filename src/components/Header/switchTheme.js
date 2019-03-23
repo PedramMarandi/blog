@@ -38,6 +38,9 @@ const Label = styled("label")`
 `
 
 const checkInput = () => {
+  if (!process.browser) {
+    return false
+  }
   const theme = localStorage.getItem("theme")
   return theme !== "lightTheme"
 }

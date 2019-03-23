@@ -2,6 +2,9 @@ import { useState } from "react"
 import * as themes from "./themes"
 
 const setInitialTheme = () => {
+  if (!process.browser) {
+    return themes.lightTheme;
+  }
   const theme = localStorage.getItem("theme")
   if (theme) {
     return themes[theme]
