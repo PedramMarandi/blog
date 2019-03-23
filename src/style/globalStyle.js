@@ -57,9 +57,6 @@ export const GlobalStyle = createGlobalStyle`
     line-height: var(--base-line);
     transition: background-color 0.5s ease;
   }
-  .Layout {
-    display: none;
-  }
   .main_width {
     width: 80%;
     margin: 0 auto;

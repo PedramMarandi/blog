@@ -7,6 +7,7 @@ const HeaderStyled = styled("header")`
   display: flex;
   justify-content: space-between;
   margin-top: calc(1 * var(--base-line));
+  height: var(--base-line);
 `
 export const Header = () => {
   return (
