@@ -1,25 +1,28 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import uuid from "uuid4"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { BlogLayout } from "../components/BlogLayout"
+import { PostList } from "../components/PostList"
 
-const StyledLayout  = styled('div')`
+const StyledLayout = styled("div")`
   margin-top: calc(3 * var(--base-line));
-`;
+`
 
 const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
-  console.log("Layout data ", data)
   return (
     <BlogLayout>
       <StyledLayout className="main_width">
         {edges.map(edge => {
-          const { frontmatter } = edge.node
+          const { frontmatter, excerpt } = edge.node
           return (
-            <div key={uuid()}>
-              <Link to={frontmatter.path}>{frontmatter.title}</Link>
-            </div>
+            <PostList
+              key={uuid()}
+              frontmatter={frontmatter}
+              excerpt={excerpt}
+            />
           )
         })}
       </StyledLayout>
@@ -46,5 +49,10 @@ export const query = graphql`
     }
   }
 `
+Layout.propTypes = {
+  data: PropTypes.shape({
+    edges: PropTypes.array,
+  }).isRequired,
+}
 
 export default Layout

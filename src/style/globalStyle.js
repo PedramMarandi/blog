@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     src: url(${fonts.IRANBoldEOT}?#iefix) format('eot'),  /* IE6–8 */
   url(${fonts.IRANBoldWOFF2}) format('woff2'),  /* Chrome36+, Opera24+*/
   url(${
-    fonts.IRANBoldWOFF
+  fonts.IRANBoldWOFF
   }) format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
  url(${fonts.IRANBoldTTF}) format('ttf');
     font-weight: 600;
@@ -37,6 +37,12 @@ export const GlobalStyle = createGlobalStyle`
   html.ln__helper {
     background-size: 1px var(--base-line);
     background-image: linear-gradient(rgba(0, 188, 212, 0.23) 1px, transparent 0%, transparent);
+    h1,
+    h2,
+    h3,
+    h4 {
+      background-color: rgba(255,227,194,0.7);
+    }
   }
   html,
   body,
