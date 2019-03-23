@@ -1,13 +1,11 @@
 ---
 path: "/third-post"
 date: "2018-07-22"
-title: "My third Post"
+title: "اندر مزایای استفاده از تابع به عنوان children در React"
 tags: ["this", "that"]
 ---
 
-Lorem ipsum.
-Lorem ipsum.
-Lorem ipsum.
+مدتی پیش قصد داشتم از [down shift](https://github.com/paypal/downshift) استفاده کنم که شکل رندر کردنش توجهم رو جلب کرد. به شکل جذابی میومد از متد‌هایی که داخل کامپوننت والد تعریف شده بود استفاده می‌کرد و اون رو به childrenهاش می‌رسوند. این شد که رفتم دنبالش ببینم چطور همچین چیزی رو نوشته و بعد از پیدا کردن جوابم (با استفاده از خوندن کد‌های این [پکیج](https://github.com/kentcdodds/react-toggled)) تصمیم گرفتم چیزی که یاد گرفتم رو به اشتراک بگذارم.<br />
 
 <!-- excerpt -->
 

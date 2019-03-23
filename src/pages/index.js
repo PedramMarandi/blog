@@ -1,16 +1,19 @@
 import React from "react"
+import styled from "styled-components"
 import uuid from "uuid4"
 import { graphql, Link } from "gatsby"
-import { Header } from "../components/Header"
 import { BlogLayout } from "../components/BlogLayout"
+
+const StyledLayout  = styled('div')`
+  margin-top: calc(3 * var(--base-line));
+`;
 
 const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   console.log("Layout data ", data)
   return (
     <BlogLayout>
-      <div className="Layout">
-        <Header />
+      <StyledLayout className="main_width">
         {edges.map(edge => {
           const { frontmatter } = edge.node
           return (
@@ -19,7 +22,7 @@ const Layout = ({ data }) => {
             </div>
           )
         })}
-      </div>
+      </StyledLayout>
     </BlogLayout>
   )
 }
