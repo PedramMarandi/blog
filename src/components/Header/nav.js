@@ -25,7 +25,7 @@ const Ul = styled("ul")`
 `
 export const Nav = () => {
   return (
-    <nav className="main_width">
+    <nav>
       <Ul>
         <li>
           <Link to="/">صفحه اول</Link>
