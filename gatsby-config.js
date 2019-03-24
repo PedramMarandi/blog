@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/gatsby-blog",
+  pathPrefix: "/blog",
   siteMetadata: {
     title: "My Blog",
     description: "gatsby reza khosroshahi blog",
@@ -18,6 +18,7 @@ module.exports = {
         start_url: "/",
         background_color: "#fff",
         theme_color: "#fff",
+        display: `standalone`,
         icon: "static/icon.png", // This path is relative to the root of the site.
       },
     },
