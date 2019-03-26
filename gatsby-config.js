@@ -17,7 +17,7 @@ module.exports = {
         short_name: "بلاگ",
         start_url: "/",
         background_color: "#fff",
-        theme_color: "#fff",
+        theme_color: "#42A5F5",
         display: `standalone`,
         icon: "static/icon.png", // This path is relative to the root of the site.
       },
