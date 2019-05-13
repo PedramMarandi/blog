@@ -1,7 +1,8 @@
 import React from "react"
 import Helmet from "react-helmet"
 import PropTypes from "prop-types"
-import defaultImage from './Rz.jpeg';
+import { defaultValues } from "./defaultValues"
+import defaultImage from "./Rz.jpeg"
 
 const resolveImage = image => {
   if (image) {
@@ -39,5 +40,9 @@ PostPageHelmet.propTypes = {
   frontmatter: PropTypes.shape({
     path: PropTypes.string,
     title: PropTypes.string,
-  }).isRequired,
+  }),
+}
+
+PostPageHelmet.defaultProps = {
+  frontmatter: defaultValues,
 }
