@@ -4,6 +4,7 @@ import styled from "styled-components"
 import { BlogLayout } from "../components/BlogLayout"
 import { mediumUp } from "../style/breakpoints"
 import { PostHtml } from '../components/PostHtml';
+import { PostPageHelmet } from "../components/Helmet"
 
 const AboutContainer = styled(PostHtml)`
   margin-top: calc(3 * var(--base-line));
@@ -23,11 +24,12 @@ const AboutContainer = styled(PostHtml)`
 `
 const AboutTemplate = ({ data }) => {
   const { markdownRemark } = data
-  const { title } = markdownRemark.frontmatter
+  const { frontmatter } = markdownRemark
   const { html } = markdownRemark
   return (
     <BlogLayout>
       <AboutContainer>
+        <PostPageHelmet frontmatter={frontmatter} />
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </AboutContainer>
     </BlogLayout>
@@ -40,6 +42,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }

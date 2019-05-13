@@ -1,7 +1,8 @@
 ---
 path: "/about"
-title: "My About Page"
+title: درباره رضا خسروشاهی
 excerpt: "A preview of my third post"
+description: "در حال حاضر برنامه‌نویس با تجربه و تمرکز بر روی front end web development هستم."
 ---
 
 # سلام! رضا خسروشاهی هستم 👋🏼
